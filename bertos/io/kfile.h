@@ -271,7 +271,7 @@ INLINE size_t kfile_write(struct KFile *fd, const void *buf, size_t size)
 	return fd->write(fd, buf, size);
 }
 
-int kfile_printf(struct KFile *fd, const char *format, ...);
+int kfile_printf(struct KFile *fd, const char *format, ...) FORMAT(__printf__, 2, 3);
 int kfile_print(struct KFile *fd, const char *s);
 
 /**
